@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:html5="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <ui:composition>
+        <div class="container pt-5">
+
+        </div>
+
+        <div class="container" style="border-style: groove;">
+            <div class="row">
+                <div class="col pt-1">
+                    <div class="mainh1">
+                        Administrar Noticias
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container pt-1">
+            <div class="col-3 mx-auto">
+                <div class="row py-3 mx-auto" style="background-color: #ddd;">
+                    <a href="#{request.contextPath}/administrador/crearnoticiaadmin.xhtml" class="btn btn-primary">Crear Noticia</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row" style="background-color: #ddd;">
+                <div class="col py-3" style="background-color: #ddd;">
+                    <div class="card">
+                        <table class="table">
+                            <thead>
+                                <tr class="table text-center">
+                                    <th scope="col">Noticia</th>
+                                    <th scope="col">
+                                        <input class="form-control" type="search" placeholder="Buscar" aria-label="Search"></input>
+                                    </th>
+                                    <th>
+                                        <button class="btn btn-outline-primary" type="submit" style="padding: 5px;">Buscar</button>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="text-center">
+                                    <th scope="row">Título Noticia</th>
+                                    <td><a href="#{request.contextPath}/administrador/editarnoticiaadmin.xhtml">Editar</a></td>
+                                    <td><a href="">Borrar</a></td>
+                                </tr>
+                                <tr class="text-center">
+                                    <th scope="row">Título Noticia</th>
+                                    <td><a href="#{request.contextPath}/administrador/editarnoticiaadmin.xhtml">Editar</a></td>
+                                    <td><a href="">Borrar</a></td>
+                                </tr>
+                                <tr class="text-center">
+                                    <th scope="row">Título Noticia</th>
+                                    <td><a href="#{request.contextPath}/administrador/editarnoticiaadmin.xhtml">Editar</a></td>
+                                    <td><a href="">Borrar</a></td>
+                                </tr>
+                                <tr class="text-center">
+                                    <th scope="row">Título Noticia</th>
+                                    <td><a href="#{request.contextPath}/administrador/editarnoticiaadmin.xhtml">Editar</a></td>
+                                    <td><a href="">Borrar</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col" style="background-color: #ddd;">
+                    <div class="btn-toolbar justify-content-center align-items-center" role="toolbar"
+                         aria-label="Toolbar with button groups">
+                        <div class="btn-group me-2" role="group" aria-label="First group">
+                            <button type="button" class="btn"><a href="">
+                                    <h6>←</h6>
+                                </a></button>
+                            <button type="button" class="btn"><a href="">
+                                    <h6>1</h6>
+                                </a></button>
+                            <button type="button" class="btn"><a href="">
+                                    <h6>2</h6>
+                                </a></button>
+                            <button type="button" class="btn"><a href="">
+                                    <h6>3</h6>
+                                </a></button>
+                            <button type="button" class="btn"><a href="">
+                                    <h6>4</h6>
+                                </a></button>
+                            <button type="button" class="btn"><a href="">
+                                    <h6>→</h6>
+                                </a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ui:composition>
+</html>

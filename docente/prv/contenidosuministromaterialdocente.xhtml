@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:html5="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <ui:composition>
+        <div class="container py-5">
+            <div class="row">
+                <div class="col" style="background-color: #ddd;">
+                    <h:form class="form-register mx-auto" html5:method="post" enctype="multipart/form-data">
+                        <h1 class="form__title">Subir actividad</h1>
+                        <div class="container--flex">
+                            <label for="" class="form__label">Curso</label>
+                            <h:inputText class="form__input" html5:name="dirigida"></h:inputText>
+                        </div>
+                        <div class="container--flex">
+                            <label for="" class="form__label">Materia</label>
+                            <h:inputText class="form__input" html5:name="materia"></h:inputText>
+                        </div>
+                        <div class="container--flex">
+                            <label for="" class="form__label">Título</label>
+                            <h:inputText class="form__input" html5:name="materia"></h:inputText>
+                        </div>
+                        <div class="container--flex">
+                            <label for="" class="form__label">Descripción</label>
+                            <h:inputText class="form__input" html5:name="materia"></h:inputText>
+                        </div>
+                        <h:inputText html5:type="file" html5:name="archivo" class="form__file"></h:inputText>
+                        <h:inputText html5:type="submit" class="form__submit"></h:inputText>
+                    </h:form>
+                </div>
+            </div>
+        </div>
+    </ui:composition>
+</html>

@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:html5="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <ui:composition>
+        <div class="container pt-2">
+
+        </div>
+
+        <div class="container" style="border-style: groove;">
+            <div class="row">
+                <div class="col pt-1">
+                    <div class="mainh1">
+                        ¡Bienvenido a tu aula!
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container py-1">
+
+        </div>
+
+        <div class="container justify-content-center d-flex">
+            <div class="row d-flex justify-content-center pt-2">
+                <div class="col pb-4 mx-auto pt-3" style="border-style: groove;">
+                    <div id="calendario" class="shadow">
+                        <div id="anterior" onclick="mesantes()"></div>
+                        <div id="posterior" onclick="mesdespues()"></div>
+                        <h2 id="titulos"></h2>
+                        <table id="diasc">
+                            <tr id="fila0">
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr id="fila1">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr id="fila2">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr id="fila3">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr id="fila4">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr id="fila5">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr id="fila6">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                        <div id="fechaactual"><i onclick="actualizar()">HOY: </i></div>
+                        <div id="buscafecha">
+                            <form action="#" name="buscar">
+                                <p>Buscar ... MES
+                                    <select name="buscames">
+                                        <option value="0">Enero</option>
+                                        <option value="1">Febrero</option>
+                                        <option value="2">Marzo</option>
+                                        <option value="3">Abril</option>
+                                        <option value="4">Mayo</option>
+                                        <option value="5">Junio</option>
+                                        <option value="6">Julio</option>
+                                        <option value="7">Agosto</option>
+                                        <option value="8">Septiembre</option>
+                                        <option value="9">Octubre</option>
+                                        <option value="10">Noviembre</option>
+                                        <option value="11">Diciembre</option>
+                                    </select>
+                                    ... AÑO ...
+                                    <input type="text" name="buscaanno" maxlength="4" size="4" />
+                                    ...
+                                    <input type="button" value="BUSCAR" onclick="mifecha()" />
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 pt-3" style="border-style:groove;">
+                    <div class="row">
+                        <div class="col pb-4">
+                            <div class="card1 shadow text-center mx-auto" style="width: auto; height: auto; justify-content: center;">
+                                <a href="#{request.contextPath}/administrador/noticiasadmin.xhtml"><img src="#{request.contextPath}/img/Noticias.png" class="card-img img-fluid" alt="Noticias"
+                                                                                          style="height: auto; width: auto;"></img></a>
+                                <div class="card-body">
+                                    <h6>Crea, edita, elimina o administra noticias y eventos de la institución.</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col pb-4">
+                            <div class="card1 shadow text-center mx-auto" style="width: auto; height: auto; justify-content: center;">
+                                <a href="#{request.contextPath}/administrador/foroadmin.xhtml"><img src="#{request.contextPath}/img/Foros.png" class="card-img img-fluid" alt="Foros"
+                                                                                      style="height: auto; width: auto;"></img></a>
+                                <div class="card-body">
+                                    <h6>iEntérate de lo que se habla en la institución y participa con aportes!</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb-4 justify-content-center mx-auto">
+                        <div class="col-auto">
+                            <img src="#{request.contextPath}/img/ESCUDO.png" alt="Logo" class="img-fluid mx-auto shadow" style="height: 220px; width: auto;"></img>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col pt-3" style="border-style: groove;">
+                    <div class="card1 shadow text-center mx-auto" style="width: auto; height: auto; justify-content: center;">
+                        <a href="#{request.contextPath}/administrador/guiaadmin.xhtml"><img src="#{request.contextPath}/img/Guia.png" class="card-img img-fluid" alt="Guía"
+                                                      style="height: auto; width: auto;"></img></a>
+                        <div class="card-body">
+                            <h6>!Da un tour por el aula de clase para saber cómo ejecutar tus funciones!</h6>
+                        </div>
+                    </div>
+                    <div class="py-4">
+                        <div class="card1 shadow text-center mx-auto" style="width: auto; height: auto; justify-content: center;">
+                            <a href="#{request.contextPath}/administrador/usuariosadmin.xhtml"><img src="#{request.contextPath}/img/Usuarios.png" class="card-img img-fluid" alt="Material de apoyo"
+                                                                                      style="height: auto; width: auto;"></img></a>
+                            <div class="card-body">
+                                <h6>Crea, edita, elimina o administra datos de usuarios del campus virtual.</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </ui:composition>
+</html>
